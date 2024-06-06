@@ -1,0 +1,50 @@
+name: "Vuln Docker Scanners Nmap Action"
+description: "Runs nmap on a target host"
+author: gipo355
+inputs:
+  target:
+    description: "Host to scan"
+    required: true
+    default: "localhost"
+  port:
+    description: "Port to scan, -p- for all ports, -p80 for a single port"
+    required: false
+    default: ""
+  generate-reports:
+    description: "Generate a report"
+    required: false
+    default: "true"
+  output-dir:
+    description: "Directory to store the reports"
+    required: false
+    default: "nmap-reports"
+  # must be done separately
+  # upload-report-to-code-scans:
+  #   description: "Upload the report"
+  #   required: false
+  #   default: "false"
+  nmap-flags:
+    description: "Arguments to pass to nmap for the direct scan, separated by comma"
+    required: false
+    default: ""
+  vulners:
+    description: "Use vulners scripts"
+    required: false
+    default: "false"
+  vulscan:
+    description: "Use vulscan scripts"
+    required: false
+    default: "false"
+runs:
+  using: "docker"
+  image: "docker://gipo355/vuln-docker-scanners:latest"
+  args:
+    - "nmap"
+    - "--target=${{ inputs.host }}"
+    - "--port=${{ inputs.port }}"
+    - "--generate-reports=${{ inputs.generate-reports }}"
+    - "--nmap-arguments=${{ inputs.nmap-arguments }}"
+    - "--vulners=${{ inputs.vulners }}"
+    - "--vulscan=${{ inputs.vulscan }}"
+    - "--output-dir=${{ inputs.reports-dir }}"
+    - "--args=${{ inputs.nmap-flags }}"

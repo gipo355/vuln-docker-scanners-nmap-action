@@ -36,15 +36,6 @@ inputs:
     required: false
     default: "false"
 runs:
-  using: "docker"
-  image: "docker://gipo355/vuln-docker-scanners:latest"
-  args:
-    - "nmap"
-    - "--target=${{ inputs.host }}"
-    - "--port=${{ inputs.port }}"
-    - "--generate-reports=${{ inputs.generate-reports }}"
-    - "--nmap-arguments=${{ inputs.nmap-arguments }}"
-    - "--vulners=${{ inputs.vulners }}"
-    - "--vulscan=${{ inputs.vulscan }}"
-    - "--output-dir=${{ inputs.reports-dir }}"
-    - "--args=${{ inputs.nmap-flags }}"
+  using: "node22"
+  main: "dist/index.js"
+  post: "dist/index.js"

@@ -1,3 +1,12 @@
+doesnt work, no network host
+
+can by pass by
+
+<https://stackoverflow.com/questions/66359932/does-dockerized-github-actions-support-network-options-for-docker-run-parameters>
+<https://github.com/zaproxy/action-full-scan/blob/master/index.js>
+
+# BUG: inputs are broken
+
 # dev moving to
 
 vuln-docker-scanners for the cli

@@ -9,6 +9,10 @@ add create issue input, issue name
 
 NOTE:
 
+## Permissions
+
+requires `security-events` and `issues` write
+
 ## Inputs
 
 ### `github_token`

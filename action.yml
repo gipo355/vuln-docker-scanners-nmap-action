@@ -14,6 +14,10 @@ inputs:
     description: "Generate a report"
     required: false
     default: "true"
+  generate-sarif:
+    description: "Generate a SARIF report"
+    required: false
+    default: "false"
   output-dir:
     description: "Directory to store the reports"
     required: false

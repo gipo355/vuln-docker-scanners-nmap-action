@@ -88,7 +88,7 @@ async function main() {
     owner: repoOwner,
     repo: repoName,
     title: "Vulnerability reports from Nmap scan",
-    body: body.join("\n"),
+    body: "Generated reports from the nmap scan",
   });
 
   // IF GENERATESARIF

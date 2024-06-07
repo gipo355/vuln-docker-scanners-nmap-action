@@ -9,5 +9,5 @@ export const inputs = {
   wantReports: getInput("generate_reports"),
   outputDir: getInput("output_dir"),
   wantSarif: getInput("generate_sarif"),
-  nmapFlags: getInput("nmap_flags"),
+  nmapFlags: getInput("flags"),
 };

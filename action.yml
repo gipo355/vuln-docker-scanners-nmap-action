@@ -30,7 +30,7 @@ inputs:
   #   description: "Upload the report"
   #   required: false
   #   default: "false"
-  nmap_flags:
+  flags:
     description: "Arguments to pass to nmap for the direct scan, separated by comma"
     required: false
     default: ""

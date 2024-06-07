@@ -41,7 +41,6 @@ async function main() {
     inputs.wantVulscan && "--vulscan=true",
     inputs.wantWulners && "--vulner=true",
     inputs.wantReports && `--generate-reports=true`,
-    inputs.wantSarif && `--generate-sarif=true`,
     inputs.nmapFlags && `--args="${inputs.nmapFlags}"`,
   ].join(" ");
 
@@ -82,14 +81,16 @@ async function main() {
 
   // TODO: put in inputs to allow creating issues. we are testing for now
   // Ideally we want to create a sarif and upload to code scans
-
   // create an issue with the reports
+  // IF CREATEISSUE
   await octokit.rest.issues.create({
     owner: repoOwner,
     repo: repoName,
     title: "Vulnerability reports from Nmap scan",
     body: body.join("\n"),
   });
+
+  // IF GENERATESARIF
 }
 
 main().catch((error) => {

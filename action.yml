@@ -10,15 +10,15 @@ inputs:
     description: "Port to scan, -p- for all ports, -p80 for a single port"
     required: false
     default: ""
-  generate-reports:
+  generate_reports:
     description: "Generate a report"
     required: false
     default: "true"
-  generate-sarif:
+  generate_sarif:
     description: "Generate a SARIF report"
     required: false
     default: "false"
-  output-dir:
+  output_dir:
     description: "Directory to store the reports"
     required: false
     default: "nmap-reports"
@@ -27,7 +27,7 @@ inputs:
   #   description: "Upload the report"
   #   required: false
   #   default: "false"
-  nmap-flags:
+  nmap_flags:
     description: "Arguments to pass to nmap for the direct scan, separated by comma"
     required: false
     default: ""

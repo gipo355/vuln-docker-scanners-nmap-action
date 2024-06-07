@@ -39,7 +39,7 @@ async function main() {
     "nmap",
     inputs.outputDir && "--output-dir=" + inputs.outputDir,
     inputs.wantVulscan && "--vulscan=true",
-    inputs.wantWulners && "--vulners=true",
+    inputs.wantWulners && "--vulner=true",
     inputs.wantReports && `--generate-reports=true`,
     inputs.wantSarif && `--generate-sarif=true`,
     inputs.nmapFlags && `--args="${inputs.nmapFlags}"`,

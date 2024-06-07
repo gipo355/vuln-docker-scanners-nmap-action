@@ -37,6 +37,7 @@ async function main() {
     `--network=host`,
     `${imageName}`,
     "nmap",
+    "--target=" + inputs.target,
     inputs.outputDir && "--output-dir=" + inputs.outputDir,
     inputs.wantVulscan && "--vulscan=true",
     inputs.wantWulners && "--vulner=true",

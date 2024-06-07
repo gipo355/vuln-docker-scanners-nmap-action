@@ -2,6 +2,9 @@ name: "Vuln Docker Scanners Nmap Action"
 description: "Runs nmap on a target host"
 author: gipo355
 inputs:
+  github_token:
+    description: "GitHub token"
+    required: true
   target:
     description: "Host to scan"
     required: true
@@ -42,4 +45,4 @@ inputs:
 runs:
   using: "node22"
   main: "dist/index.js"
-  post: "dist/index.js"
+  # post: "dist/index.js"

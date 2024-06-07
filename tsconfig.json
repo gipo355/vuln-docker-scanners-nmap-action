@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "declaration": true,
+    "declaration": false,
     "noEmit": true,
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "noUncheckedIndexedAccess": true,

@@ -2,7 +2,18 @@
 
 Uses cli tool from docker container <https://github.com/gipo355/vuln-docker-scanners>
 
+using <https://github.com/actions/toolkit> with octokit
+
+TODO:
+add create issue input, issue name
+
+NOTE:
+
 ## Inputs
+
+### `github_token`
+
+**Required** The github token to use for the action in order to create an issue.
 
 ### `target`
 

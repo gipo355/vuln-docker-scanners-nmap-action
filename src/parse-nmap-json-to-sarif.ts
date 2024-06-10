@@ -74,6 +74,9 @@ export function convertNmapJsonToSarif(json: any): any {
               locations: [
                 {
                   physicalLocation: {
+                    address: {
+                      absoluteAddress: -1,
+                    },
                     artifactLocation: {
                       uri: `tcp://${host["HostAddress"][0]["Address"]}:${port["PortID"]}`,
                     },

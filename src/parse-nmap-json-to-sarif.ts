@@ -69,16 +69,13 @@ export function convertNmapJsonToSarif(json: any): any {
               ruleId: cve,
               level: "note",
               message: {
-                text: cve,
+                text: `tcp://${host["HostAddress"][0]["Address"]}:${port["PortID"]}`,
               },
               locations: [
                 {
                   physicalLocation: {
                     address: {
                       absoluteAddress: -1,
-                    },
-                    artifactLocation: {
-                      uri: `tcp://${host["HostAddress"][0]["Address"]}:${port["PortID"]}`,
                     },
                   },
                 },

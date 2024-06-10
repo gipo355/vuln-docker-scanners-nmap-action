@@ -74,9 +74,9 @@ async function main() {
       body.push(collapsibleWrapper("Vulners Report", vulnerContent.toString()));
 
       // TODO: for now we are testing this hardcoded parsed file
-      info("Creating SARIF report from vulners");
+      console.log("Creating SARIF report from vulners");
       const sarifPath = createNmapSarifFromJson(vulnerPath);
-      info("SARIF report created at: " + sarifPath);
+      console.log("SARIF report created at: " + sarifPath);
     }
 
     if (inputs.nmapFlags) {
@@ -96,13 +96,13 @@ async function main() {
     repo: repoName,
   });
 
-  console.log("looking for issue", issueTitle);
+  console.log("looking for issue: ", issueTitle);
 
   const issue = issues.find((issue) => issue.title === issueTitle);
 
   console.log("issue", issue);
 
-  if (issue) {
+  if (issue?.id) {
     console.log("updating issue", issue.number);
     await octokit.rest.issues.createComment({
       owner: repoOwner,
@@ -123,8 +123,6 @@ async function main() {
       body: "Generated reports from the nmap scan",
     });
   }
-
-  // IF GENERATESARIF
 }
 
 main().catch((error) => {

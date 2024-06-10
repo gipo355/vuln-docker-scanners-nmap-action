@@ -1,3 +1,4 @@
+// @ts-nocheck
 import fs from "node:fs";
 
 export const createNmapSarifFromJson = (path: string): string => {

@@ -138,16 +138,13 @@
           "ruleId": "OSV:CVE-2023-32324",
           "level": "note",
           "message": {
-            "text": "OSV:CVE-2023-32324"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -157,16 +154,13 @@
           "ruleId": "PRION:CVE-2022-26691",
           "level": "note",
           "message": {
-            "text": "PRION:CVE-2022-26691"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -176,16 +170,13 @@
           "ruleId": "OSV:CVE-2022-26691",
           "level": "note",
           "message": {
-            "text": "OSV:CVE-2022-26691"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -195,16 +186,13 @@
           "ruleId": "OSV:CVE-2023-34241",
           "level": "note",
           "message": {
-            "text": "OSV:CVE-2023-34241"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -214,16 +202,13 @@
           "ruleId": "OSV:CVE-2023-4504",
           "level": "note",
           "message": {
-            "text": "OSV:CVE-2023-4504"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -233,16 +218,13 @@
           "ruleId": "CVE-2022-26691",
           "level": "note",
           "message": {
-            "text": "CVE-2022-26691"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -252,16 +234,13 @@
           "ruleId": "PRION:CVE-2023-4504",
           "level": "note",
           "message": {
-            "text": "PRION:CVE-2023-4504"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -271,16 +250,13 @@
           "ruleId": "CHAINGUARD:CVE-2023-4504",
           "level": "note",
           "message": {
-            "text": "CHAINGUARD:CVE-2023-4504"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -290,16 +266,13 @@
           "ruleId": "PRION:CVE-2023-34241",
           "level": "note",
           "message": {
-            "text": "PRION:CVE-2023-34241"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -309,16 +282,13 @@
           "ruleId": "PRION:CVE-2023-32324",
           "level": "note",
           "message": {
-            "text": "PRION:CVE-2023-32324"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }
@@ -328,16 +298,13 @@
           "ruleId": "CHAINGUARD:CVE-2023-32324",
           "level": "note",
           "message": {
-            "text": "CHAINGUARD:CVE-2023-32324"
+            "text": "tcp://127.0.0.1:631"
           },
           "locations": [
             {
               "physicalLocation": {
                 "address": {
                   "absoluteAddress": -1
-                },
-                "artifactLocation": {
-                  "uri": "tcp://127.0.0.1:631"
                 }
               }
             }

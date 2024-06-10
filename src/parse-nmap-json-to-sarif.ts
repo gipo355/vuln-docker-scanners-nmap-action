@@ -44,7 +44,53 @@ export function convertNmapJsonToSarif(json: any): any {
   // Convert each vulnerability to a SARIF result
   for (let host of vulnersReport["Host"]) {
     for (let port of host["Port"]) {
-      for (let script of port["Script"]) {
+      // check if script is iterable
+      if (!port["Script"].length) {
+        for (let script of port["Script"]) {
+          if (script["ID"] === "vulners") {
+            let cves = script["Output"]
+              .split("\n")
+              .filter((line) => line.startsWith("    \t"))
+              .map((line) => line.split("\t")[1]);
+
+            for (let cve of cves) {
+              // Add the rule for this vulnerability
+              sarifReport["runs"][0]["tool"]["driver"]["rules"].push({
+                id: cve,
+                name: cve,
+                shortDescription: {
+                  text: cve,
+                },
+                helpUri: `https://vulners.com/cve/${cve}`,
+                properties: {
+                  cwe: cve,
+                },
+              });
+
+              // Add the result for this vulnerability
+              sarifReport["runs"][0]["results"].push({
+                ruleId: cve,
+                level: "note",
+                message: {
+                  text: `tcp://${host["HostAddress"][0]["Address"]}:${port["PortID"]}`,
+                },
+                locations: [
+                  {
+                    physicalLocation: {
+                      address: {
+                        absoluteAddress: -1,
+                      },
+                    },
+                  },
+                ],
+              });
+            } // for cve of cves
+          } // if script["ID"] === "vulners"
+        } // script of port["Script"]
+      } else {
+        // if port["Script"].length
+        const script = port["Script"];
+
         if (script["ID"] === "vulners") {
           let cves = script["Output"]
             .split("\n")
@@ -82,11 +128,11 @@ export function convertNmapJsonToSarif(json: any): any {
                 },
               ],
             });
-          }
-        }
+          } // for cve of cves
+        } // if script["ID"] === "vulners"
       }
-    }
-  }
+    } //  port of host["Port"]
+  } // host of vulnersReport["Host"]
 
   return sarifReport;
 }

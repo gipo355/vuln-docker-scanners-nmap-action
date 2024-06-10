@@ -80,16 +80,36 @@ async function main() {
 
   const octokit = getOctokit(inputs.githubToken);
 
-  // TODO: put in inputs to allow creating issues. we are testing for now
-  // Ideally we want to create a sarif and upload to code scans
-  // create an issue with the reports
-  // IF CREATEISSUE
-  await octokit.rest.issues.create({
+  const issueTitle = "Vulnerability reports from Nmap scan";
+
+  // get issue, if exists, update it adding a comment with new reports
+  const { data: issues } = await octokit.rest.issues.listForRepo({
     owner: repoOwner,
     repo: repoName,
-    title: "Vulnerability reports from Nmap scan",
-    body: "Generated reports from the nmap scan",
   });
+
+  const issue = issues.find(
+    (issue) => issue.title === issueTitle && issue.state === "open",
+  );
+  if (issue) {
+    await octokit.rest.issues.createComment({
+      owner: repoOwner,
+      repo: repoName,
+      issue_number: issue.number,
+      body: "Generated reports from the nmap scan update",
+    });
+  } else {
+    // TODO: put in inputs to allow creating issues. we are testing for now
+    // Ideally we want to create a sarif and upload to code scans
+    // create an issue with the reports
+    // IF CREATEISSUE
+    await octokit.rest.issues.create({
+      owner: repoOwner,
+      repo: repoName,
+      title: issueTitle,
+      body: "Generated reports from the nmap scan",
+    });
+  }
 
   // IF GENERATESARIF
 }

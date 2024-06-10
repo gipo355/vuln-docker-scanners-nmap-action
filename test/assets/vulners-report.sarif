@@ -1,0 +1,349 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Vulners Scanner",
+          "version": "7.95",
+          "informationUri": "https://vulners.com",
+          "rules": [
+            {
+              "id": "OSV:CVE-2023-32324",
+              "name": "OSV:CVE-2023-32324",
+              "shortDescription": {
+                "text": "OSV:CVE-2023-32324"
+              },
+              "helpUri": "https://vulners.com/cve/OSV:CVE-2023-32324",
+              "properties": {
+                "cwe": "OSV:CVE-2023-32324"
+              }
+            },
+            {
+              "id": "PRION:CVE-2022-26691",
+              "name": "PRION:CVE-2022-26691",
+              "shortDescription": {
+                "text": "PRION:CVE-2022-26691"
+              },
+              "helpUri": "https://vulners.com/cve/PRION:CVE-2022-26691",
+              "properties": {
+                "cwe": "PRION:CVE-2022-26691"
+              }
+            },
+            {
+              "id": "OSV:CVE-2022-26691",
+              "name": "OSV:CVE-2022-26691",
+              "shortDescription": {
+                "text": "OSV:CVE-2022-26691"
+              },
+              "helpUri": "https://vulners.com/cve/OSV:CVE-2022-26691",
+              "properties": {
+                "cwe": "OSV:CVE-2022-26691"
+              }
+            },
+            {
+              "id": "OSV:CVE-2023-34241",
+              "name": "OSV:CVE-2023-34241",
+              "shortDescription": {
+                "text": "OSV:CVE-2023-34241"
+              },
+              "helpUri": "https://vulners.com/cve/OSV:CVE-2023-34241",
+              "properties": {
+                "cwe": "OSV:CVE-2023-34241"
+              }
+            },
+            {
+              "id": "OSV:CVE-2023-4504",
+              "name": "OSV:CVE-2023-4504",
+              "shortDescription": {
+                "text": "OSV:CVE-2023-4504"
+              },
+              "helpUri": "https://vulners.com/cve/OSV:CVE-2023-4504",
+              "properties": {
+                "cwe": "OSV:CVE-2023-4504"
+              }
+            },
+            {
+              "id": "CVE-2022-26691",
+              "name": "CVE-2022-26691",
+              "shortDescription": {
+                "text": "CVE-2022-26691"
+              },
+              "helpUri": "https://vulners.com/cve/CVE-2022-26691",
+              "properties": {
+                "cwe": "CVE-2022-26691"
+              }
+            },
+            {
+              "id": "PRION:CVE-2023-4504",
+              "name": "PRION:CVE-2023-4504",
+              "shortDescription": {
+                "text": "PRION:CVE-2023-4504"
+              },
+              "helpUri": "https://vulners.com/cve/PRION:CVE-2023-4504",
+              "properties": {
+                "cwe": "PRION:CVE-2023-4504"
+              }
+            },
+            {
+              "id": "CHAINGUARD:CVE-2023-4504",
+              "name": "CHAINGUARD:CVE-2023-4504",
+              "shortDescription": {
+                "text": "CHAINGUARD:CVE-2023-4504"
+              },
+              "helpUri": "https://vulners.com/cve/CHAINGUARD:CVE-2023-4504",
+              "properties": {
+                "cwe": "CHAINGUARD:CVE-2023-4504"
+              }
+            },
+            {
+              "id": "PRION:CVE-2023-34241",
+              "name": "PRION:CVE-2023-34241",
+              "shortDescription": {
+                "text": "PRION:CVE-2023-34241"
+              },
+              "helpUri": "https://vulners.com/cve/PRION:CVE-2023-34241",
+              "properties": {
+                "cwe": "PRION:CVE-2023-34241"
+              }
+            },
+            {
+              "id": "PRION:CVE-2023-32324",
+              "name": "PRION:CVE-2023-32324",
+              "shortDescription": {
+                "text": "PRION:CVE-2023-32324"
+              },
+              "helpUri": "https://vulners.com/cve/PRION:CVE-2023-32324",
+              "properties": {
+                "cwe": "PRION:CVE-2023-32324"
+              }
+            },
+            {
+              "id": "CHAINGUARD:CVE-2023-32324",
+              "name": "CHAINGUARD:CVE-2023-32324",
+              "shortDescription": {
+                "text": "CHAINGUARD:CVE-2023-32324"
+              },
+              "helpUri": "https://vulners.com/cve/CHAINGUARD:CVE-2023-32324",
+              "properties": {
+                "cwe": "CHAINGUARD:CVE-2023-32324"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "OSV:CVE-2023-32324",
+          "level": "note",
+          "message": {
+            "text": "OSV:CVE-2023-32324"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "PRION:CVE-2022-26691",
+          "level": "note",
+          "message": {
+            "text": "PRION:CVE-2022-26691"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OSV:CVE-2022-26691",
+          "level": "note",
+          "message": {
+            "text": "OSV:CVE-2022-26691"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OSV:CVE-2023-34241",
+          "level": "note",
+          "message": {
+            "text": "OSV:CVE-2023-34241"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "OSV:CVE-2023-4504",
+          "level": "note",
+          "message": {
+            "text": "OSV:CVE-2023-4504"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-26691",
+          "level": "note",
+          "message": {
+            "text": "CVE-2022-26691"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "PRION:CVE-2023-4504",
+          "level": "note",
+          "message": {
+            "text": "PRION:CVE-2023-4504"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CHAINGUARD:CVE-2023-4504",
+          "level": "note",
+          "message": {
+            "text": "CHAINGUARD:CVE-2023-4504"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "PRION:CVE-2023-34241",
+          "level": "note",
+          "message": {
+            "text": "PRION:CVE-2023-34241"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "PRION:CVE-2023-32324",
+          "level": "note",
+          "message": {
+            "text": "PRION:CVE-2023-32324"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CHAINGUARD:CVE-2023-32324",
+          "level": "note",
+          "message": {
+            "text": "CHAINGUARD:CVE-2023-32324"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "address": {
+                  "absoluteAddress": -1
+                },
+                "artifactLocation": {
+                  "uri": "tcp://127.0.0.1:631"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

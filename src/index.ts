@@ -1,12 +1,14 @@
 import {
   setFailed,
   // ExitCode
+  info,
 } from "@actions/core";
 import { exec } from "@actions/exec";
 import fs from "node:fs";
 import { getOctokit, context } from "@actions/github";
 import { inputs } from "./inputs";
 import { collapsibleWrapper } from "./utils";
+import { createNmapSarifFromJson } from "./parse-nmap-json-to-sarif";
 
 async function main() {
   const workspace = process.env.GITHUB_WORKSPACE;
@@ -70,6 +72,11 @@ async function main() {
     if (inputs.wantWulners) {
       const vulnerContent = await fs.promises.readFile(vulnerPath);
       body.push(collapsibleWrapper("Vulners Report", vulnerContent.toString()));
+
+      // TODO: for now we are testing this hardcoded parsed file
+      info("Creating SARIF report from vulners");
+      const sarifPath = createNmapSarifFromJson(vulnerPath);
+      info("SARIF report created at: " + sarifPath);
     }
 
     if (inputs.nmapFlags) {
@@ -84,14 +91,19 @@ async function main() {
 
   // get issue, if exists, update it adding a comment with new reports
   const { data: issues } = await octokit.rest.issues.listForRepo({
+    state: "open",
     owner: repoOwner,
     repo: repoName,
   });
 
-  const issue = issues.find(
-    (issue) => issue.title === issueTitle && issue.state === "open",
-  );
+  console.log("looking for issue", issueTitle);
+
+  const issue = issues.find((issue) => issue.title === issueTitle);
+
+  console.log("issue", issue);
+
   if (issue) {
+    console.log("updating issue", issue.number);
     await octokit.rest.issues.createComment({
       owner: repoOwner,
       repo: repoName,
@@ -99,6 +111,7 @@ async function main() {
       body: "Generated reports from the nmap scan update",
     });
   } else {
+    console.log("creating issue");
     // TODO: put in inputs to allow creating issues. we are testing for now
     // Ideally we want to create a sarif and upload to code scans
     // create an issue with the reports

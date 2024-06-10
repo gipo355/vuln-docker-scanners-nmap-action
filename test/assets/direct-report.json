@@ -1,0 +1,93 @@
+{
+  "Scanner": "nmap",
+  "Args": "nmap -sP -oA nmap-reports/direct/direct-report localhost",
+  "Start": 1717775471,
+  "StartStr": "Fri Jun  7 17:51:11 2024",
+  "Version": "7.95",
+  "ScanInfo": {
+    "Type": "",
+    "Protocol": "",
+    "NumServices": 0,
+    "Services": ""
+  },
+  "Host": [
+    {
+      "StartTime": 0,
+      "EndTime": 0,
+      "Port": null,
+      "HostAddress": [
+        {
+          "Address": "127.0.0.1",
+          "AddressType": "ipv4",
+          "Vendor": ""
+        }
+      ],
+      "HostNames": {
+        "HostName": [
+          {
+            "Name": "localhost",
+            "Type": "user"
+          },
+          {
+            "Name": "localhost",
+            "Type": "PTR"
+          }
+        ]
+      },
+      "Status": {
+        "State": "up",
+        "Reason": "conn-refused"
+      },
+      "OS": {
+        "OSPortUsed": null,
+        "OSClass": null,
+        "OSMatch": null
+      },
+      "Trace": {
+        "Port": 0,
+        "Protocol": "",
+        "Hops": null
+      },
+      "Uptime": {
+        "Seconds": 0,
+        "LastBoot": ""
+      },
+      "Distance": {
+        "Value": 0
+      },
+      "TCPSequence": {
+        "Index": "",
+        "Difficulty": "",
+        "Values": ""
+      },
+      "IPIDSequence": {
+        "Class": "",
+        "Values": ""
+      },
+      "TCPTSSequence": {
+        "Class": "",
+        "Values": ""
+      }
+    }
+  ],
+  "Verbose": {
+    "Level": 0
+  },
+  "Debugging": {
+    "Level": 0
+  },
+  "RunStats": {
+    "Finished": {
+      "Time": 1717775471,
+      "TimeStr": "Fri Jun  7 17:51:11 2024",
+      "Elapsed": 0,
+      "Summary": "Nmap done at Fri Jun  7 17:51:11 2024; 1 IP address (1 host up) scanned in 0.00 seconds",
+      "Exit": "success"
+    },
+    "Hosts": {
+      "Up": 1,
+      "Down": 0,
+      "Total": 1
+    }
+  }
+}

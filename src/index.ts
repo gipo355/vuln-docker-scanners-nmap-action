@@ -42,7 +42,7 @@ async function main() {
     "--target=" + inputs.target,
     inputs.outputDir && "--output-dir=" + inputs.outputDir,
     inputs.wantVulscan && "--vulscan=true",
-    inputs.wantWulners && "--vulner=true",
+    inputs.wantVulner && "--vulner=true",
     inputs.wantReports && `--generate-reports=true`,
     inputs.nmapFlags && `--args="${inputs.nmapFlags}"`,
   ].join(" ");
@@ -69,7 +69,7 @@ async function main() {
       );
     }
 
-    if (inputs.wantWulners) {
+    if (inputs.wantVulner) {
       const vulnerContent = await fs.promises.readFile(vulnerPath);
       body.push(collapsibleWrapper("Vulner Report", vulnerContent.toString()));
 

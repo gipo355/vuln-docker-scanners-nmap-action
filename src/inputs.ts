@@ -4,7 +4,7 @@ export const inputs = {
   githubToken: getInput("github_token"),
   port: getInput("port"),
   target: getInput("target"),
-  wantWulners: getInput("vulner"),
+  wantVulner: getInput("vulner"),
   wantVulscan: getInput("vulscan"),
   wantReports: getInput("generate_reports"),
   outputDir: getInput("output_dir"),

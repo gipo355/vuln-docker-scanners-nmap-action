@@ -34,8 +34,8 @@ inputs:
     description: "Arguments to pass to nmap for the direct scan, separated by comma"
     required: false
     default: ""
-  vulners:
-    description: "Use vulners scripts"
+  vulner:
+    description: "Use vulner scripts"
     required: false
     default: "false"
   vulscan:

@@ -55,7 +55,7 @@ async function main() {
   const body = [];
 
   // Get the reports and parse json to sarif
-  const vulnerPath = `${workspace}/${inputs.outputDir}/vulners/vulners-report.json`;
+  const vulnerPath = `${workspace}/${inputs.outputDir}/vulner/vulner-report.json`;
   const vulscanPath = `${workspace}/${inputs.outputDir}/vulscan/vulscan-report.json`;
   const directPath = `${workspace}/${inputs.outputDir}/direct/direct-report.json`;
 
@@ -71,7 +71,7 @@ async function main() {
 
     if (inputs.wantWulners) {
       const vulnerContent = await fs.promises.readFile(vulnerPath);
-      body.push(collapsibleWrapper("Vulners Report", vulnerContent.toString()));
+      body.push(collapsibleWrapper("Vulner Report", vulnerContent.toString()));
 
       // TODO: for now we are testing this hardcoded parsed file
       // console.log("Creating SARIF report from vulners");

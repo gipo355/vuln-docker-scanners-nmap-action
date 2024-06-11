@@ -12,7 +12,7 @@ let report: object | null = null;
 
 describe("parseNmapJsonToSarif", () => {
   test("should load json file into memory", () => {
-    json = readNmapJson("test/assets/vulners-report.json");
+    json = readNmapJson("test/assets/vulner-report.json");
 
     console.log(JSON.stringify(json, null, 2));
 
@@ -28,7 +28,7 @@ describe("parseNmapJsonToSarif", () => {
   });
 
   test("should create a sarif file", () => {
-    const path = "test/assets/vulners-report.sarif";
+    const path = "test/assets/vulner-report.sarif";
     const modifiedPath = writeSarifReport(path, report);
 
     console.log(modifiedPath);

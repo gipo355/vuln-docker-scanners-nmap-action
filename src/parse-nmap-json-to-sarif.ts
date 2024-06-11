@@ -30,7 +30,7 @@ export function convertNmapJsonToSarif(json: any): any {
       {
         tool: {
           driver: {
-            name: "Vulners Scanner",
+            name: "Vulner Scanner",
             version: vulnersReport["Version"],
             informationUri: "https://vulners.com",
             rules: [],

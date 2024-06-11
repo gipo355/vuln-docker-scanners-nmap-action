@@ -103,6 +103,7 @@ async function main() {
 
   console.log("issue", issue);
 
+  // BUG: issue keeps getting duplicated
   if (issue?.id) {
     console.log("updating issue", issue.number);
     await octokit.rest.issues.createComment({

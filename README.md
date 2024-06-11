@@ -52,9 +52,9 @@ Example: `-sP`
 
 If provided, will execute direct scan
 
-### `vulners`
+### `vulner`
 
-Execute vulners script. Default `false`.
+Execute vulner script. Default `false`.
 
 ### `vulscan`
 

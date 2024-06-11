@@ -74,9 +74,10 @@ async function main() {
       body.push(collapsibleWrapper("Vulners Report", vulnerContent.toString()));
 
       // TODO: for now we are testing this hardcoded parsed file
-      console.log("Creating SARIF report from vulners");
-      const sarifPath = createNmapSarifFromJson(vulnerPath);
-      console.log("SARIF report created at: " + sarifPath);
+      // console.log("Creating SARIF report from vulners");
+      // BUG: conversion to sarif not working
+      // const sarifPath = createNmapSarifFromJson(vulnerPath);
+      // console.log("SARIF report created at: " + sarifPath);
     }
 
     if (inputs.nmapFlags) {
